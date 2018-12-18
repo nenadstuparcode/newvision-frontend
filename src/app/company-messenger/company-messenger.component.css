@@ -1,0 +1,20 @@
+@import "../../assets/libs/jscrollpane/jquery.jscrollpane.css";
+@import "../../assets/styles/apps/messenger.min.css";
+
+
+.ks-messenger .ks-discussions {
+    background: #fff;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #dee0e1;
+}
+
+.ks-messenger .ks-messages, .ks-messenger__messages {
+    -js-display: flex;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-grow: 1;
+    background: #fff;
+}

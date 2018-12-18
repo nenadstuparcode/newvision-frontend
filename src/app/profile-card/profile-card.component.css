@@ -1,0 +1,26 @@
+.see-full-btn {
+    margin: 15px 0 0 !important;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+.see-full-btn:hover { 
+    cursor: pointer;
+}
+.profile-img {
+    width:75px !important;
+    height: 75px !important;
+}
+.profile-text {
+    font-size: 24px !important;
+    display: flex;
+    align-items: center;
+}
+.btn-icon-eye {
+   font-size: 18px !important;
+   margin-left: 10px !important;
+}
+
+.profile-text img { 
+    margin-right: 7px !important;
+}

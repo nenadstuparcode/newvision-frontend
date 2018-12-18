@@ -1,0 +1,171 @@
+
+<div class="ks-page" style="height:90vh;">
+    <div class="ks-page-content" style="background-image: url('./assets/img/NewVisionHandShake.jpg'); background-size: cover; ">
+        <div class="ks-logo" style="font-size: 36px !important; color:white !important; margin-bottom: 10% !important; text-shadow: 3px 2px 4px black">New Vision</div>
+        <div class="ks-page-content-body ks-tabs-page-container">
+          <ul class="nav ks-nav-tabs ks-tabs-page-default ks-tabs-full-page ks-text-center">
+              <li class="nav-item">
+                  <a class="nav-link active" href="#" data-toggle="tab" data-target="#in-patient">
+                      Personal
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="tab" data-target="#discharged">
+                      Business
+                  </a>
+              </li>
+          </ul>
+          <div class="tab-content">
+              <div class="tab-pane active ks-column-section" id="in-patient" role="tabpanel">
+                  <div class="row">
+                      <div class="col-lg-12">
+                        <div class="card panel panel-default ks-light ks-panel"  style="box-shadow: 1px 1px 20px #444 !important;">
+                            <div class="card-block">
+                                <form  (submit)="register()" class="form-container">
+                                    <h4 class="ks-header">Sign Up</h4>
+                                    <div class="form-group row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">  
+                                          <input type="text" class="form-control" name="first_name" placeholder="First Name" [(ngModel)]="credentials.first_name">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                          <input type="text" class="form-control" name="last_name" placeholder="Last Name" [(ngModel)]="credentials.last_name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <div class="input-icon icon-left icon-lg icon-color-primary">  
+                                                    <input class="form-control ks-phone-mask-input" id="" name="contact_number" placeholder="Contact number" type="text" maxlength="25" [(ngModel)]="credentials.contact_number">
+                                                    <span class="icon-addon">
+                                                            <span class="la la-phone"></span>
+                                                        </span>
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <div class="input-icon icon-left icon-lg icon-color-primary">  
+                                                    <input class="form-control"  name="date_of_birth" placeholder="Birth date" type="date"  [(ngModel)]="credentials.date_of_birth">
+                                                    <span class="icon-addon">
+                                                            <span class="la la-calendar"></span>
+                                                        </span>
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <div class="input-icon icon-left icon-lg icon-color-primary">  
+                                                <input type="text" class="form-control" name="profession_type_name" placeholder="Profession" [(ngModel)]="credentials.profession_type_name">
+                                                <span class="icon-addon">
+                                                        <span class="la la-user-times"></span>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <div class="input-icon icon-left icon-lg icon-color-primary">  
+                                                     <select class="form-control" #select name="user_type_id" [(ngModel)]="credentials.user_type_id">
+                                                         <option  selected  value="1">Personal</option>
+                                                         <option   value="2">Business</option>
+                                                     </select>
+                                                    <span class="icon-addon">
+                                                            <span class="la la-suitcase"></span>
+                                                        </span>
+                                            </div>
+                                    </div>
+                                    <div class="form-group" *ngIf="select.value == 2">
+                                        <div class="input-icon icon-left icon-lg icon-color-primary">  
+                                                <input class="form-control ks-phone-mask-input"  name="contact_number" placeholder="Company name" type="text"  [(ngModel)]="credentials.company_name">
+                                                <span class="icon-addon">
+                                                        <span class="la la-phone"></span>
+                                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-icon icon-left icon-lg icon-color-primary">
+                                            <input type="tel" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.email">
+                                            <span class="icon-addon">
+                                                <span class="la la-at"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-icon icon-left icon-lg icon-color-primary">
+                                          <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password">
+                                        <span class="icon-addon">
+                                            <span class="la la-key"></span>
+                                        </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <button type="submit" class="btn btn-lg btn-primary btn-block">Register!</button>
+                                    </div>
+                                    <div class="ks-text-center">
+                                        <span class="text-muted">By clicking "Sign Up" I agree the </span> <a href="pages-signup.html">Terms Of Service</a>
+                                    </div>
+                                    <div class="ks-text-center">
+                                        Already have an account? <a routerLink="/register">Login</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="tab-pane" id="discharged" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-12">
+                            <div class="card panel panel-default ks-light ks-panel"  style="box-shadow: 1px 1px 20px #444 !important;">
+                                    <div class="card-block">
+                                        <form  (submit)="register()" class="form-container">
+                                            <h4 class="ks-header">Sign Up</h4>
+                                            <h6 class="ks-header ks-text-center">Create business profile</h6>
+                                            <div class="form-group row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6">  
+                                                  <input type="text" class="form-control" name="first_name" placeholder="First Name" [(ngModel)]="credentials.first_name">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                                  <input type="text" class="form-control" name="last_name" placeholder="Last Name" [(ngModel)]="credentials.last_name">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12">  
+                                                      <input type="text" class="form-control" name="company_name" placeholder="Company name" [(ngModel)]="credentials.first_name">
+                                                    </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                                      <input type="text" class="form-control" name="last_name" placeholder="Last Name" [(ngModel)]="credentials.last_name">
+                                                    </div>
+                                                </div>
+                                            <div class="form-group">
+                                                <div class="input-icon icon-left icon-lg icon-color-primary">
+                                                  <input type="email" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="credentials.email">
+                                            <span class="icon-addon">
+                                                <span class="la la-at"></span>
+                                            </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-icon icon-left icon-lg icon-color-primary">
+                                                  <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password">
+                                                <span class="icon-addon">
+                                                    <span class="la la-key"></span>
+                                                </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <button type="submit" class="btn btn-lg btn-primary btn-block">Register!</button>
+                                            </div>
+                                            <div class="ks-text-center">
+                                                <span class="text-muted">By clicking "Sign Up" I agree the </span> <a href="pages-signup.html">Terms Of Service</a>
+                                            </div>
+                                            <div class="ks-text-center">
+                                                Already have an account? <a routerLink="/register">Login</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="ks-footer">
+        <span class="ks-copyright">&copy; New Vision 2018</span>
+    </div>
+  </div>

@@ -1,0 +1,15 @@
+.intl-tel-input {
+    display: table-cell !important;
+  }
+  .intl-tel-input .selected-flag {
+    z-index: 4 !important;
+  }
+  .intl-tel-input .country-list {
+    z-index: 5 !important;
+  }
+  .input-group .intl-tel-input .form-control {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 0 !important;
+  }

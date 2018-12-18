@@ -1,0 +1,13 @@
+
+.color-premium {
+    color: #ffb300 !important;
+    }
+    
+        
+    .ks-pricing-plans-page > .ks-plans > .ks-plan.ks-info ~ .bg-premium:before {
+        background: #ffb300 !important;
+    }
+    
+    .bg-premium {
+        border:1px solid #ffb30059 !important;
+    }

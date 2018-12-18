@@ -1,0 +1,198 @@
+@import '../../assets/styles/apps/file-manager.min.css';
+@import '../../assets/styles/libs/flatpickr/flatpickr.min.css';
+@import '../../assets/libs/izi-modal/css/iziModal.min.css';
+@import '../../assets/styles/libs/izi-modal/izi-modal.min.css';
+@import '../../assets/styles/apps/projects/grid-board.min.css';
+
+
+.ks-projects-grid-board {
+    height: 55%;
+}
+.mg-top-10 {
+    margin-top:5%;
+}
+
+
+.box-shadow {
+    box-shadow: 1px 8px 14px -5px rgba(0,0,0,0.61);
+  }
+  
+  .box-shadow-sm {
+    box-shadow: 0px 6px 4px -5px rgba(0,0,0,0.61);
+  }
+
+
+  .company-card-title {
+      font-size:1.2em;
+      font-weight: 600;
+  }
+
+  .btn-view-more {
+    box-shadow: 1px 8px 14px -5px rgba(0,0,0,0.61) !important;
+  }
+
+  .btn-view-more:hover {
+    box-shadow: 1px 6px 5px -4px rgba(0,0,0,0.61) !important;
+  }
+.company-card-mail {
+    font-size:12px; 
+    margin-left:10px;
+    color:#333;
+    font-weight: 500;
+}
+  
+.icon-header-profile {
+    font-size: 36px;
+}
+
+.profile-flag {
+    float: right !important;
+    margin-left:7px;
+} 
+
+.ks-panel.ks-widget.ks-widget-info>.card-block>.ks-item>span:first-child, .panel.ks-widget.ks-widget-info>.card-block>.ks-item>span:first-child {
+    font-size: 10px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.ks-panel.ks-widget.ks-widget-info>.card-block>.ks-item>span:first-child, .panel.ks-widget.ks-widget-info>.card-block>.ks-item>span {
+    font-size: 14px;
+}
+
+.education-inline {
+    display: flex;
+    justify-content: space-between;
+    padding:20px 20px 0px 20px !important;
+}
+
+.ks-panel.ks-solid.panel-default>.card-block, .ks-panel.ks-solid>.card-block, .panel.ks-solid.panel-default>.card-block, .panel.ks-solid>.card-block {
+    padding: 20px 20px 20px 20px !important;
+    background: 0 0;
+}
+
+.ks-panel.ks-solid.panel-default>.card-header, .ks-panel.ks-solid>.card-header, .panel.ks-solid.panel-default>.card-header, .panel.ks-solid>.card-header {
+    border-bottom: none;
+    padding: 20px 20px !important;
+    background: 0 0;
+}
+.box-shadow {
+    box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.61);
+}
+
+.box-shadow-sm {
+    box-shadow: 0px 6px 4px -5px rgba(0,0,0,0.61);
+}
+
+.img-profile {
+    border-radius: 100px;
+}
+
+.file-download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin:20px 0;
+    transition: all .3s ease; 
+    transform: scale(1) translateZ(0);;
+    outline: 1px solid transparent;
+    backface-visibility: hidden;
+    will-change: transform;
+    perspective: 1000;
+    
+}
+.file-download:hover {
+   transform: scale(1.03);
+}
+.doc-icon {
+    font-size: 48px !important;
+    outline: 2px solid black !important;
+    margin-bottom: 10px !important;
+    outline-offset: 10px !important ;
+    outline-color: rgb(214, 178, 18) !important;
+    cursor: pointer !important;
+}
+.files-profiles {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ks-filename {
+    margin-top:7px;
+}
+.ks-cover {
+    height: 150px !important;
+}
+.driver-licence-icon i { 
+    font-size: 15px !important;
+}
+
+.dropdown-menu { 
+    position: relative;
+    border:none;
+    width: 100%;
+}
+
+.edit-input { 
+    height: auto !important;
+}
+
+.save-btn { 
+    padding:5px 15px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.save-btn-text-area {
+    padding:5px 15px;
+    position: absolute;
+    bottom:3px;
+    right: 3px;
+}
+
+.edit-link {
+    color:blue !important;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.btn-add { 
+    margin:10px 0;
+    cursor: pointer;
+}
+
+.action-upload {
+    display: flex;
+    flex-direction: column;
+}
+.no-padding {
+    padding:0;
+}
+.btn-group .ks-upload-custom-dropdown-menu>.ks-body>.ks-block {
+    padding: 0;
+}
+
+.btn-save-fixed { 
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    padding:0px 25px;
+    font-size: 18px;
+    background: rgba(6, 107, 20, 0.48);
+    
+    cursor: pointer;
+}
+.btn-save-fixed:hover {
+    background: rgba(6, 107, 20, 0.78);
+}
+.ks-editor {
+    position: relative;
+}
+.bold{
+    padding-top: 25px;
+    font-weight: 500;
+    font-size: 15px;
+
+}

@@ -1,0 +1,336 @@
+
+
+
+<div>
+  <app-navbar></app-navbar>
+</div>
+
+
+<div class="ks-page-container ks-dashboard-tabbed-sidebar-fixed-tabs" appAutoHeight data-is-auto-height="parent" data-is-min-height="true">
+ 
+  <div class="ks-column ks-sidebar ks-info">
+    <app-sidebar></app-sidebar>
+</div>
+
+<div class="ks-column ks-page">
+  <div class="ks-page-header">
+    <section class="ks-title">
+      <h3>Full profile | {{ details?.first_name }} {{ details?.last_name }}</h3>
+    </section>
+  </div>
+  
+  <div class="ks-page-content">
+    <div class="ks-page-content-body ks-social-profile">
+      <div class="ks-social-profile-header">
+        <div class="ks-cover" style="background-image: url('assets/img/profile/cover.png')"></div>
+        <div class="ks-user">
+          <div class="ks-info">
+           <img src="../../assets/img/avatars/slika.png" class="ks-avatar img-profile" width="167" height="167">
+            <div class="ks-body">
+              <div class="ks-name">{{ details?.first_name }} {{ details?.last_name }} <img width="28px" height="28px" class="profile-flag" src="../../assets/img/flags/64/Bosnia-and-Herzegovina.png" alt=""></div>
+              <div class="ks-description">IT Engineer</div>
+              <div class="ks-description">Software Developer</div>
+              <div class="ks-actions">
+                <button class="btn btn-success">Send message</button>
+              </div>
+            </div>
+          </div>
+          <div class="ks-statistics">
+            <div class="ks-item">
+              <div class="ks-amount">11</div>
+              <div class="ks-text">documents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ks-social-profile-body">
+        <div class="ks-widgets">
+          <div class="card panel panel-default ks-solid ks-widget ks-widget-info box-shadow-sm">
+            <div class="card-block">
+              <div class="ks-item" style="display:flex; align-items:center;">
+                      <i class="la la-user ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                      <span class="ks-name">About</span>
+              </div>
+              <div class="ks-item">
+                <span>Username</span>
+                <span>@{{details?.first_name | lowercase}}{{details?.last_name | lowercase}}</span>
+              </div>
+              <div class="ks-item">
+                <span>Location</span>
+                <span>{{details?.city}}, {{details?.country}}</span>
+              </div>
+              <div class="ks-item">
+                  <span>E-mail</span>
+                  <span>{{ details?.email }}</span>
+              </div>
+              <div class="ks-item">
+                  <span>Telephone</span>
+                  <span>{{details?.contact_number}}</span>
+              </div>
+              <div class="ks-item">
+                  <span>Passport</span>
+                  <span>{{details?.country}}</span>
+                </div>
+              <hr>
+              <h5 class="">Download</h5>
+              <div class="ks-items files-profiles">
+                  <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-folder file-download">
+                      <span class="ks-thumb la la-folder-o doc-icon"></span>
+                      <span class="ks-filename">Work Folder</span>
+                  </a>
+                  <div class="ks-item ks-item-file file-download">
+                      <span class="ks-thumb la la-file-excel-o text-success doc-icon"></span>
+                      <span class="ks-filename">Statistics.xls</span>
+                  </div>
+                  <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                      <span class="ks-thumb la la-file-powerpoint-o text-warning doc-icon"></span>
+                      <span class="ks-filename">Nenad_CV.ppt</span>
+                  </a>
+                  <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                   <span class="ks-thumb la la-file-pdf-o text-danger doc-icon"></span>
+                      <span class="ks-filename">My_CV_Letter.pdf</span>
+                  </a>
+                  <div class="ks-item ks-item-file file-download">
+                    <span class="ks-thumb la la-file-code-o text-gray doc-icon"></span>
+                      <span class="ks-filename">Css_example.css</span>
+                  </div>
+                  <div class="ks-item ks-item-file file-download">
+                    <span class="ks-thumb la la-file-word-o text-info doc-icon"></span>
+                      <span class="ks-filename">Letter.doc</span>
+                  </div>
+                  <div class="ks-item ks-item-file file-download">
+                   <span class="ks-thumb la la-file-audio-o text-pink doc-icon"></span>
+                      <span class="ks-filename">Audio.mp3</span>
+                  </div>
+                  <div class="ks-item ks-item-file file-download">
+                   <span class="ks-thumb la la-file-archive-o text-brown doc-icon"></span>
+                      <span class="ks-filename">Compressed.zip</span>
+                  </div>
+                  <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                   <span class="ks-thumb la la-file-text-o text-info doc-icon"></span>
+                      <span class="ks-filename">CV.txt</span>
+                  </a>
+                  <div class="ks-item ks-item-file file-download">
+                     <span class="ks-thumb la la-file-o text-gray doc-icon"></span>
+                      <span class="ks-filename">Software.exe</span>
+                  </div>
+                  <div class="ks-item ks-item-file file-download">
+                     <span class="ks-thumb la la-file-movie-o text-pink doc-icon"></span>
+                      <span class="ks-filename">Video.mov</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+  
+          
+  
+          <div class="card panel panel-default ks-solid ks-widget ks-widget-tags box-shadow-sm ">
+            <h5 class="card-header">Skills</h5>
+            <div class="card-block">
+              <span *ngFor="let skill of detailsSkillset; index as i" class="badge badge-pill badge-default-outline">{{skill.skill_set_name}}</span>
+            </div>
+          </div>
+  
+          <div class="card panel panel-default ks-solid ks-widget ks-widget-social-profiles box-shadow-sm ">
+            <h5 class="card-header">Social Profiles</h5>
+            <div class="card-block">
+              <a href="https://www.facebook.com/nenad.s.stupar" class="ks-social-profile">
+                <span class="la la-facebook"></span>
+              </a>
+              <a href="#" class="ks-social-profile">
+                <span class="la la-twitter"></span>
+              </a>
+              <a href="#" class="ks-social-profile">
+                <span class="la la-vk"></span>
+              </a>
+              <a href="#" class="ks-add">+</a>
+            </div>
+          </div>
+        </div>
+        <div class="ks-feed">
+          <div class="card panel panel-default ks-post box-shadow">
+            <div class="ks-header">
+              <a href="#" class="ks-user">
+                <i class="la la-info ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                <span class="ks-name">General Info</span>
+              </a>
+              <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+            </div>
+            <div class="ks-body">
+              <div class="ks-text">
+                Express Wi-Fi empowers entrepreneurs to build a business by providing their community with access to the internet. Facebook designed the technology, and local internet providers add the connectivity. Express Wi-Fi is part of our Internet.org initiative.
+              </div>
+              <div class="card panel panel-default ks-solid ks-widget ks-widget-info padding-20">
+                  <div class="card-block">
+                    <div class="ks-item">
+                      <span>Username</span>
+                      <span>@{{details?.first_name | lowercase}}{{details?.last_name | lowercase}}</span>
+                    </div>
+                    <div class="ks-item">
+                      <span>Location</span>
+                      <span>{{details?.city}}, {{details?.country}}</span>
+                    </div>
+                    <div class="ks-item">
+                        <span>Profession</span>
+                        <span>IT Engineer</span>
+                    </div>
+                    <div class="ks-item">
+                        <span>Position</span>
+                        <span>Software Developer</span>
+                    </div>
+                    <div class="ks-item">
+                        <span>Birthdate</span>
+                        <span>{{details?.date_of_birth | date}}</span>
+                      </div>
+                    <div class="ks-item">
+                        <span>Joined</span>
+                        <span>{{details?.created | date}}</span>
+                      </div>
+                    <div class="ks-item">
+                        <span>Short description</span>
+                        <span>{{details?.short_desc}}</span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-university ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Education Info</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div *ngFor="let education of detailsEducation; index as i" class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block education-inline">
+                          <div class="ks-item">
+                              <span>Name of institution</span>
+                              <span>{{education.Institute_university_name}}</span>
+                          </div>
+                          <div class="ks-item">
+                              <span>Degree</span>
+                              <span>{{education.certificate_degree_name}}</span>
+                          </div>
+                          <div class="ks-item">
+                              <span>Period</span>
+                              <span>from {{education.starting_date | date}} to {{education.completion_date | date}}</span>
+                          </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow ">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-history ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Experience</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div *ngFor="let experience of detailsExperience; index as i" class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block education-inline">
+                          <div class="ks-item">
+                              <span>Name of institution</span>
+                              <span>{{experience.company_name}}</span>
+                          </div>
+                          <div class="ks-item">
+                              <span>Position</span>
+                              <span>{{experience.job_position}}</span>
+                          </div>
+                          <div class="ks-item">
+                              <span>Period</span>
+                              <span>from {{experience.start_date | date }} to {{experience.end_date | date}} </span>
+                          </div>
+                    </div>
+                    <div class="card-block">
+                      <div class="ks-item">
+                          <span>Job description</span>
+                          <span>{{experience.job_description}}</span>   
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow ">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-university ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Skills and techniques</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block">
+                        <div class="ks-tags">
+                            <span *ngFor="let skill of detailsSkillset; index as i" class="badge badge-success-outline">{{skill.skill_set_name}}</span>
+                          </div>
+                       </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow ">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-language ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span  class="ks-name">Languages</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block">
+                        <div class="ks-tags">
+                                <span *ngFor="let lang of detailsLanguage; index as i"  class="badge badge-info-outline"> <img  alt="" src="../../assets/img/flags/16/United-Kingdom.png"> {{lang.language_name}} ({{lang.language_level}}/10)</span>
+                          </div>
+                       </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow ">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-car ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Driving licences</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block">
+                        <div class="ks-tags driver-licence-icon">
+                          <span *ngFor="let drLicence of detailsDriverLicence; index as i"  class="badge badge-info-outline"><i class="la la-{{drLicence.dr_licence_type}}" width="28px" height="28px"></i> {{drLicence.dr_licence_name}} | {{drLicence.dr_licence_type}}</span>
+                          </div>
+                       </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ks-mobile-overlay"></div>
+</div>
+
+<!--
+
+<app-login></app-login>
+-->
+
+
+
+
+
+
+
+
+
+
+
+

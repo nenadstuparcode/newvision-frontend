@@ -1,0 +1,212 @@
+
+
+<div>
+  <app-navbar></app-navbar>
+</div>
+
+
+<div class="ks-page-container ks-dashboard-tabbed-sidebar-fixed-tabs" appAutoHeight data-is-auto-height="parent" data-is-min-height="true">
+ 
+  <div class="ks-column ks-sidebar ks-info">
+    <app-sidebar></app-sidebar>
+</div>
+
+
+<div class="ks-column ks-page">
+<div class="ks-page-header">
+  <section class="ks-title-and-subtitle">
+    <div class="ks-title-block">
+      <h3 class="ks-main-title"> {{ details?.first_name }} {{ details?.last_name }} / Open jobs</h3>
+      <div class="ks-sub-title">List of open jobs</div>
+    </div>
+  </section>
+</div>
+<div class="ks-page-content">
+  <div class="ks-page-content-body">
+    <div class="ks-dashboard-tabbed-sidebar ks-dashboard-tabbed-sidebar-fixed-tabs">
+      <div class="ks-dashboard-tabbed-sidebar-widgets">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="card ks-widget-payment-simple-amount-item ks-purple box-shadow">
+              <div class="payment-simple-amount-item-icon-block">
+                <span class="ks-icon-combo-chart ks-icon"></span>
+              </div>
+
+              <div class="payment-simple-amount-item-body">
+                <div class="payment-simple-amount-item-amount">
+                  <span class="ks-amount">Your profession</span>
+                  <span class="ks-amount-icon ks-icon-circled-up-right"></span>
+                </div>
+                <div class="payment-simple-amount-item-description">
+                  <span class="ks-progress-type">{{details?.profession_type_name}} </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card ks-widget-payment-simple-amount-item ks-green box-shadow">
+              <div class="payment-simple-amount-item-icon-block">
+                <span class="la la-pie-chart ks-icon"></span>
+              </div>
+              <div class="payment-simple-amount-item-body">
+                <div class="payment-simple-amount-item-amount">
+                  <span class="ks-amount">Jobs open (64)</span>
+                  <span class="ks-amount-icon ks-icon-circled-up-right"></span>
+                </div>
+                <div class="payment-simple-amount-item-description">
+                 <span class="ks-progress-type">64 open positions for your profession</span>  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card ks-widget-payment-simple-amount-item ks-pink box-shadow">
+              <div class="payment-simple-amount-item-icon-block">
+                <span class="ks-icon-user ks-icon"></span>
+              </div>
+
+              <div class="payment-simple-amount-item-body">
+                <div class="payment-simple-amount-item-amount">
+                  <span class="ks-amount">Account is valid</span>
+                  <span class="ks-amount-icon ks-icon-circled-down-left"></span>
+                </div>
+                <div class="payment-simple-amount-item-description">
+                  <span class="ks-progress-type">35 days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card ks-widget-payment-simple-amount-item ks-orange box-shadow">
+              <div class="payment-simple-amount-item-icon-block">
+                <span class="la la-area-chart ks-icon"></span>
+              </div>
+
+              <div class="payment-simple-amount-item-body">
+                <div class="payment-simple-amount-item-amount">
+                  <span class="ks-amount">Your Location</span>
+                  <span class="ks-amount-icon ks-icon-circled-up-right"></span>
+                </div>
+                <div class="payment-simple-amount-item-description">
+                  <span class="ks-progress-type">{{details?.city}}, {{details?.country}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ks-page-content-body ks-projects-grid-board">
+    <div class="ks-projects-grid-board-projects">
+      <div class="ks-projects-grid-board-body" appAutoHeight appScrollable>
+        <div class="ks-scroll-wrapper ks-rows-section">
+          <div class="row">
+              <div class="col-xl-8 col-lg-12">
+                  <div class="card panel panel-default ks-project box-shadow">
+                    <div class="ks-project-header">
+                      <div class="dropdown ks-control">
+                        <a class="btn btn-link ks-no-text ks-no-arrow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="la la-ellipsis-h ks-icon"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="#">Add Card</a>
+                          <a class="dropdown-item" href="#">Delete</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ks-project-body">
+                      <a href="#" class="ks-name ks-purple">
+                        <img src="../../assets/data/company.jpg" width="55" height="55" class="ks-image"> 
+                        <span class="ks-description company-card-title">Software Company GMBH <br> <p class="ks-description company-card-mail"><i class="la la-envelope-o"></i> softcomp@business.de</p> </span>
+                      
+                      </a>
+                     
+                      <div class="ks-name">
+                        <span class="ks-text">Javascript Senior Programmer </span>
+                      </div>
+                      <div class="ks-description">
+                        Advanced OO JavaScript is a big plus. 5+ years in Application Development experience in JavaScript frameworks....
+                      </div>
+                      <div class="ks-meta">
+                          <div class="ks-item">
+                              <div class="ks-name">
+                                Profession
+                              </div>
+                              <div class="ks-description">
+                                Software
+                              </div>
+                            </div>
+                            <div class="ks-item">
+                              <div class="ks-name">
+                                Position
+                              </div>
+                              <div class="ks-description">
+                                Programmer
+                              </div>
+                            </div>
+                        <div class="ks-item">
+                          <div class="ks-name">
+                            Deadline
+                          </div>
+                          <div class="ks-description">
+                            January 15, 2019
+                          </div>
+                        </div>
+                        <div class="ks-item">
+                          <div class="ks-name">
+                            Progress
+                          </div>
+                          <div class="ks-description">
+                            <div class="ks-progress ks-progress-inline">
+                              <div class="progress ks-progress-xs">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                              <span class="ks-amount">75%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ks-item">
+                          <div class="ks-name">
+                            Location
+                          </div>
+                          <div class="ks-description">
+                            Munich, Germany
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ks-tags">
+                        <span class="badge badge-success-outline">Design</span>
+                        <span class="badge badge-info-outline">Development</span>
+                        <span class="badge badge-pink-outline">front-end</span>
+                        <span class="badge badge-success-outline">Javascript</span>
+                        <span class="badge badge-info-outline">Nodejs</span>
+                        <span class="badge badge-pink-outline">MySql</span>
+                      </div>
+                      <div class="ks-controls ks-text-right">
+                           <a routerLink="/post" class="btn btn-warning btn-view-more"> <i class="la la-eye"></i> View More</a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="ks-mobile-overlay"></div>
+</div>
+
+<!--
+
+<app-login></app-login>
+-->
+

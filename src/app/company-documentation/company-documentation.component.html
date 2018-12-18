@@ -1,0 +1,397 @@
+
+
+<div>
+  <app-navbar-employer></app-navbar-employer>
+</div>
+
+
+<div class="ks-page-container ks-dashboard-tabbed-sidebar-fixed-tabs" appAutoHeight data-is-auto-height="parent" data-is-min-height="true">
+ 
+  <div class="ks-column ks-sidebar ks-info">
+    <app-sidebar-employer></app-sidebar-employer>
+</div>
+
+<div class="ks-column ks-page">
+  <div class="ks-page-header">
+    <section class="ks-title">
+      <h3>Full profile | Software Company GMBH</h3>
+    </section>
+  </div>
+  
+  <div class="ks-page-content">
+    <div class="ks-page-content-body ks-social-profile">
+      <div class="ks-social-profile-header">
+        <div class="ks-cover" style="background-image: url('assets/img/profile/cover.png')"></div>
+        <div class="ks-user">
+          <div class="ks-info">
+           <img src="../../assets/img/avatars/slika.png" class="ks-avatar img-profile" width="167" height="167">
+            <div class="ks-body">
+              <div class="ks-name">{{ details?.first_name }} {{ details?.last_name }} <img width="28px" height="28px" class="profile-flag" src="../../assets/img/flags/64/Bosnia-and-Herzegovina.png" alt=""></div>
+              <div class="ks-description">IT Engineer</div>
+              <div class="ks-description">Software Developer</div>
+              <div class="ks-actions">
+                <button class="btn btn-success">Send message</button>
+              </div>
+            </div>
+          </div>
+          <div class="ks-statistics">
+            <div class="ks-item">
+              <div class="ks-amount">11</div>
+              <div class="ks-text">documents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ks-social-profile-body">
+        <div class="ks-widgets">
+          <div class="card panel panel-default ks-solid ks-widget ks-widget-info box-shadow-sm">
+            <div class="card-block">
+              <div class="ks-item" style="display:flex; align-items:center;">
+                      <i class="la la-user ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                      <span class="ks-name">About</span>
+              </div>
+              <div class="ks-item">
+                <span>Username</span>
+                <span>@nenadstupar24</span>
+              </div>
+              <div class="ks-item">
+                <span>Location</span>
+                <span>Banjaluka, Bosnia and Herzegovina</span>
+              </div>
+              <div class="ks-item">
+                  <span>E-mail</span>
+                  <span>{{ details?.email }}</span>
+              </div>
+              <div class="ks-item">
+                  <span>Telephone</span>
+                  <span>0038766207978</span>
+              </div>
+              <div class="ks-item">
+                  <span>Passport</span>
+                  <span>Bosnia and Herzegovina</span>
+                </div>
+              <hr>
+              <h5 class="">Download</h5>
+              <div class="ks-items files-profiles">
+                  <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-folder file-download">
+                      <span class="ks-thumb la la-folder-o doc-icon"></span>
+                      <span class="ks-filename">Work Folder</span>
+                  </a>
+                  <div class="ks-item ks-item-file file-download">
+                      <span class="ks-thumb la la-file-excel-o text-success doc-icon"></span>
+                      <span class="ks-filename">Statistics.xls</span>
+                  </div>
+                  <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                      <span class="ks-thumb la la-file-powerpoint-o text-warning doc-icon"></span>
+                      <span class="ks-filename">Nenad_CV.ppt</span>
+                  </a>
+                  <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                   <span class="ks-thumb la la-file-pdf-o text-danger doc-icon"></span>
+                      <span class="ks-filename">My_CV_Letter.pdf</span>
+                  </a>
+                  <div class="ks-item ks-item-file file-download">
+                    <span class="ks-thumb la la-file-code-o text-gray doc-icon"></span>
+                      <span class="ks-filename">Css_example.css</span>
+                  </div>
+                  <div class="ks-item ks-item-file file-download">
+                    <span class="ks-thumb la la-file-word-o text-info doc-icon"></span>
+                      <span class="ks-filename">Letter.doc</span>
+                  </div>
+                  <div class="ks-item ks-item-file file-download">
+                   <span class="ks-thumb la la-file-audio-o text-pink doc-icon"></span>
+                      <span class="ks-filename">Audio.mp3</span>
+                  </div>
+                  <div class="ks-item ks-item-file file-download">
+                   <span class="ks-thumb la la-file-archive-o text-brown doc-icon"></span>
+                      <span class="ks-filename">Compressed.zip</span>
+                  </div>
+                  <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                   <span class="ks-thumb la la-file-text-o text-info doc-icon"></span>
+                      <span class="ks-filename">CV.txt</span>
+                  </a>
+                  <div class="ks-item ks-item-file file-download">
+                     <span class="ks-thumb la la-file-o text-gray doc-icon"></span>
+                      <span class="ks-filename">Software.exe</span>
+                  </div>
+                  <div class="ks-item ks-item-file file-download">
+                     <span class="ks-thumb la la-file-movie-o text-pink doc-icon"></span>
+                      <span class="ks-filename">Video.mov</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+  
+          
+  
+          <div class="card panel panel-default ks-solid ks-widget ks-widget-tags box-shadow-sm ">
+            <h5 class="card-header">Skills</h5>
+            <div class="card-block">
+              <span class="badge badge-pill badge-default-outline">UI/UX</span>
+              <span class="badge badge-pill badge-default-outline">Web Design</span>
+              <span class="badge badge-pill badge-default-outline">HTML</span>
+              <span class="badge badge-pill badge-default-outline">CSS</span>
+              <span class="badge badge-pill badge-default-outline">JS</span>
+              <span class="badge badge-pill badge-default-outline">Photoshop</span>
+              <span class="badge badge-pill badge-default-outline">Sketch</span>
+              <span class="badge badge-pill badge-default-outline">PHP</span>
+            </div>
+          </div>
+  
+          <div class="card panel panel-default ks-solid ks-widget ks-widget-social-profiles box-shadow-sm ">
+            <h5 class="card-header">Social Profiles</h5>
+            <div class="card-block">
+              <a href="https://www.facebook.com/nenad.s.stupar" class="ks-social-profile">
+                <span class="la la-facebook"></span>
+              </a>
+              <a href="#" class="ks-social-profile">
+                <span class="la la-twitter"></span>
+              </a>
+              <a href="#" class="ks-social-profile">
+                <span class="la la-vk"></span>
+              </a>
+              <a href="#" class="ks-add">+</a>
+            </div>
+          </div>
+        </div>
+        <div class="ks-feed">
+          <div class="card panel panel-default ks-post box-shadow">
+            <div class="ks-header">
+              <a href="#" class="ks-user">
+                <i class="la la-info ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                <span class="ks-name">General Info</span>
+              </a>
+              <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+            </div>
+            <div class="ks-body">
+              <div class="ks-text">
+                Express Wi-Fi empowers entrepreneurs to build a business by providing their community with access to the internet. Facebook designed the technology, and local internet providers add the connectivity. Express Wi-Fi is part of our Internet.org initiative.
+              </div>
+              <div class="card panel panel-default ks-solid ks-widget ks-widget-info padding-20">
+                  <div class="card-block">
+                    <div class="ks-item">
+                      <span>Username</span>
+                      <span>@nenadstupar24</span>
+                    </div>
+                    <div class="ks-item">
+                      <span>Location</span>
+                      <span>Banjaluka, Bosnia and Herzegovina</span>
+                    </div>
+                    <div class="ks-item">
+                        <span>Profession</span>
+                        <span>IT Engineer</span>
+                    </div>
+                    <div class="ks-item">
+                        <span>Position</span>
+                        <span>Software Developer</span>
+                    </div>
+                    <div class="ks-item">
+                        <span>Birthdate</span>
+                        <span>January 24, 1993</span>
+                      </div>
+                    <div class="ks-item">
+                        <span>Joined</span>
+                        <span>December 29, 2018</span>
+                      </div>
+                    <div class="ks-item">
+                        <span>Short description</span>
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt hic laboriosam at eos soluta, doloremque exercitationem? Odit alias dolorum magni expedita necessitatibus ipsa reiciendis nisi incidunt consectetur. Non, explicabo dolorum!</span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-university ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Education Info</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block education-inline">
+                          <div class="ks-item">
+                              <span>Name of institution</span>
+                              <span>SC Mihajlo Pupin</span>
+                          </div>
+                          <div class="ks-item">
+                              <span>Degree</span>
+                              <span>Computer Technician</span>
+                          </div>
+                          <div class="ks-item">
+                              <span>Period</span>
+                              <span>from 2008 to 2012</span>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                      <div class="card-block education-inline">
+                            <div class="ks-item">
+                                <span>Name of institution</span>
+                                <span>Banjaluka College</span>
+                            </div>
+                            <div class="ks-item">
+                                <span>Degree</span>
+                                <span>IT Engineer</span>
+                            </div>
+                            <div class="ks-item">
+                                <span>Period</span>
+                                <span>from 2014 to 2018</span>
+                            </div>
+                      </div>
+                    </div>
+              </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow ">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-history ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Experience</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block education-inline">
+                          <div class="ks-item">
+                              <span>Name of institution</span>
+                              <span>Asioso doo</span>
+                          </div>
+                          <div class="ks-item">
+                              <span>Position</span>
+                              <span>Web Developer</span>
+                          </div>
+                          <div class="ks-item">
+                              <span>Period</span>
+                              <span>from 2/2018 to 9/2018 </span>
+                          </div>
+                    </div>
+                    <div class="card-block">
+                      <div class="ks-item">
+                          <span>Job description</span>
+                          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus temporibus illum necessitatibus ut cum quae quam earum unde odio cupiditate eveniet doloribus, id asperiores voluptatem suscipit! Amet labore numquam repellendus!</span>   
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                      <div class="card-block education-inline">
+                            <div class="ks-item">
+                                <span>Name of institution</span>
+                                <span>JSGuru</span>
+                            </div>
+                            <div class="ks-item">
+                                <span>Position</span>
+                                <span>Web Developer</span>
+                            </div>
+                            <div class="ks-item">
+                                <span>Period</span>
+                                <span>from 2/2017 to 7/2017</span>
+                            </div>
+                      </div>
+                      <div class="card-block">
+                          <div class="ks-item">
+                              <span>Job description</span>
+                              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus temporibus illum necessitatibus ut cum quae quam earum unde odio cupiditate eveniet doloribus, id asperiores voluptatem suscipit! Amet labore numquam repellendus!</span>
+                           
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                        <div class="card-block education-inline">
+                              <div class="ks-item">
+                                  <span>Name of institution</span>
+                                  <span>Digital Electronic</span>
+                              </div>
+                              <div class="ks-item">
+                                  <span>Position</span>
+                                  <span>Web Developer</span>
+                              </div>
+                              <div class="ks-item">
+                                  <span>Period</span>
+                                  <span>from 10/2018 to present</span>
+                              </div>
+                        </div>
+                        <div class="card-block">
+                            <div class="ks-item">
+                                <span>Job description</span>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus temporibus illum necessitatibus ut cum quae quam earum unde odio cupiditate eveniet doloribus, id asperiores voluptatem suscipit! Amet labore numquam repellendus!</span>
+                            </div>
+                          </div>
+                      </div>
+              </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow ">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-university ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Skills and techniques</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block">
+                        <div class="ks-tags">
+                            <span class="badge badge-success-outline">Design</span>
+                            <span class="badge badge-info-outline">Development</span>
+                            <span class="badge badge-pink-outline">front-end</span>
+                          </div>
+                       </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow ">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-language ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Languages</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block">
+                        <div class="ks-tags">
+                                <span _ngcontent-c3="" class="badge badge-info-outline"> <img _ngcontent-c3="" alt="" src="../../assets/img/flags/16/United-Kingdom.png"> English (7/10)</span>
+                                <span _ngcontent-c3="" class="badge badge-info-outline"> <img _ngcontent-c3="" alt="" src="../../assets/img/flags/16/Germany.png"> German (3/10) </span>
+                          </div>
+                       </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card panel panel-default ks-post box-shadow ">
+              <div class="ks-header">
+                <a href="#" class="ks-user">
+                  <i class="la la-car ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                  <span class="ks-name">Driving licences</span>
+                </a>
+                <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+              </div>
+              <div class="ks-body">
+                <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                    <div class="card-block">
+                        <div class="ks-tags driver-licence-icon">
+                          <span  class="badge badge-info-outline"><i class="la la-car" width="28px" height="28px"></i> Car</span>
+                          <span  class="badge badge-info-outline"><i class="la la-bus" width="18px" height="18px"></i> Bus</span>
+                          <span  class="badge badge-info-outline"><i class="la la-truck" width="18px" height="18px"></i> Truck</span>
+                          </div>
+                       </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ks-mobile-overlay"></div>
+</div>
+
+<!--
+
+<app-login></app-login>
+-->
+

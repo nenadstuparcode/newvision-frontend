@@ -1,0 +1,863 @@
+
+
+<div>
+    <app-navbar></app-navbar>
+  </div>
+  
+  
+  <div class="ks-page-container ks-dashboard-tabbed-sidebar-fixed-tabs" appAutoHeight data-is-auto-height="parent" data-is-min-height="true">
+   
+    <div class="ks-column ks-sidebar ks-info">
+      <app-sidebar></app-sidebar>
+  </div>
+  
+  <div class="ks-column ks-page">
+<div class="ks-page-header">
+    <section class="ks-title">
+      <h3>Edit profile | {{ details?.first_name }} {{ details?.last_name }}</h3>
+    </section>
+  </div>
+
+  <div class="ks-page-content">
+    <div class="ks-page-content-body ks-social-profile">
+      <div class="ks-social-profile-header">
+        <div class="ks-cover" style="background-image: url('assets/img/profile/cover.png')">
+        </div>
+        <div class="ks-user">
+          <div class="ks-info">
+              <div class="avatar-container">
+                    <img src="http://localhost:8080/api/file/{{fileUpload.id}}" class="ks-avatar img-profile" width="167" height="167">
+                    <div class="upload-on-hover">
+                            <i data-toggle="modal" data-target="#uploadPhoto" class="la la-pencil-square-o" width="28px" height="28px"></i>
+                     </div>
+              </div>
+         
+            <div class="ks-body">
+              <div class="ks-name">{{ details?.first_name }} {{ details?.last_name }} <img width="28px" height="28px" class="profile-flag" src="../../assets/img/flags/64/Bosnia-and-Herzegovina.png" alt=""></div>
+              <div class="ks-description">IT Engineer</div>
+              <div class="ks-description">Software Developer</div>
+            </div>
+          </div>
+          <div class="ks-statistics">
+            <div class="ks-item">
+              <div class="ks-amount">11</div>
+              <div class="ks-text">documents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form #f="ngForm">
+        <div class="ks-social-profile-body">
+            <div class="ks-widgets">
+              <div class="card panel panel-default ks-solid ks-widget ks-widget-info box-shadow-sm">
+                <div class="card-block">
+                  <div class="ks-item" style="display:flex; align-items:center;">
+                          <i class="la la-user ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                          <span class="ks-name">About</span>
+                  </div>
+                  <div class="ks-item">
+                        <span>Username</span>
+                        <span>@{{details?.first_name | lowercase}}{{details?.last_name | lowercase}}</span>
+                  </div>
+                  <div class="ks-item">
+                        <span>Location</span>
+                        <span>{{details?.city}}, {{details?.country}}</span>
+                  </div>
+                  <div class="ks-item">
+                        <span>E-mail</span>
+                        <span>{{details?.email}}</span>
+                  </div>
+                  <div class="ks-item">
+                        <span>Telephone</span>
+                        <span>{{details?.contact_number}}</span>
+                  </div>
+                  <div class="ks-item">
+                        <span>Passport</span>
+                        <span>{{details?.country}}</span>
+                  </div>
+                  <div class="ks-item">
+                        <span>Joined</span>
+                        <span>{{details?.created | date}}</span>
+                  </div>
+                  <hr>
+                  <h5 class="">Download</h5>
+                  <div class="ks-items files-profiles">
+                      <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-folder file-download">
+                        <span class="ks-thumb la la-folder-o doc-icon"></span>
+                        <span class="ks-filename">Work Folder</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </a>
+                      <div class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-excel-o text-success doc-icon"></span>
+                        <span class="ks-filename">Statistics.xls</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </div>
+                      <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-powerpoint-o text-warning doc-icon"></span>
+                        <span class="ks-filename">Nenad_CV.ppt</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </a>
+                      <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-pdf-o text-danger doc-icon"></span>
+                        <span class="ks-filename">My_CV_Letter.pdf</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </a>
+                      <div class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-code-o text-gray doc-icon"></span>
+                        <span class="ks-filename">Css_example.css</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </div>
+                      <div class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-word-o text-info doc-icon"></span>
+                        <span class="ks-filename">Letter.doc</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </div>
+                      <div class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-audio-o text-pink doc-icon"></span>
+                        <span class="ks-filename">Audio.mp3</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </div>
+                      <div class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-archive-o text-brown doc-icon"></span>
+                        <span class="ks-filename">Compressed.zip</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </div>
+                      <a href="../../assets/data/NenadStuparCV.pdf" download="Nenad_Stupar_CV" class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-text-o text-info doc-icon"></span>
+                        <span class="ks-filename">CV.txt</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </a>
+                      <div class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-o text-gray doc-icon"></span>
+                        <span class="ks-filename">Software.exe</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </div>
+                      <div class="ks-item ks-item-file file-download">
+                        <span class="ks-thumb la la-file-movie-o text-pink doc-icon"></span>
+                        <span class="ks-filename">Video.mov</span>
+                        <span class="remove-btn-file"><i class="la la-close"></i></span>
+                      </div>
+                      <div class="card">
+                        <div class="ks-upload-block">
+                            <button class="btn  btn-warning ks-btn-file">
+                                <span class="la la-cloud-upload ks-icon"></span>
+                                <span class="ks-text">Choose file</span>
+                                <input type="file" name="file_input">
+                            </button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card panel panel-default ks-solid ks-widget ks-widget-tags box-shadow-sm ">
+                <h5 class="card-header">Skills and techniques</h5>
+                <div class="card-block">
+                  <span *ngFor="let skill of detailsSkillset; index as i" class="badge badge-pill badge-default-outline">{{skill.skill_set_name}}</span>
+                </div>
+              </div>
+      
+              <div class="card panel panel-default ks-solid ks-widget ks-widget-social-profiles box-shadow-sm ">
+                <h5 class="card-header">Social Profiles</h5>
+                <div class="card-block">
+                  <a href="https://www.facebook.com/nenad.s.stupar" class="ks-social-profile">
+                    <span class="la la-facebook"></span>
+                  </a>
+                  <a href="#" class="ks-social-profile">
+                    <span class="la la-twitter"></span>
+                  </a>
+                  <a href="#" class="ks-social-profile">
+                    <span class="la la-vk"></span>
+                  </a>
+                  <a href="#" class="ks-add">+</a>
+                </div>
+              </div>
+            </div>
+            <div class="ks-feed">
+              <div class="card panel panel-default ks-post box-shadow">
+                <div class="ks-header">
+                  <a href="#" class="ks-user">
+                    <i class="la la-info ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                    <span class="ks-name">General Info</span>
+                  </a>
+                  <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+                </div>
+                <div class="ks-body">
+                  <div class="card panel panel-default ks-solid ks-widget ks-widget-info padding-20">
+                      <div class="card-block">
+                        <div class="ks-item">
+                          <span>Username</span>
+                          <span>@{{details?.first_name | lowercase}}{{details?.last_name | lowercase}}</span>
+                        </div>
+                        <div class="ks-item">
+                            <span>Firstname</span>
+                                    <div class="ks-editor">
+                                        <input name="first_name" [ngModel] = "details?.first_name" value="{{details?.first_name}}"  class="form-control edit-input" placeholder="Enter your job position">
+                                    </div>
+                        </div>
+                        <div class="ks-item">
+                            <span>Lastname</span>
+                                    <div class="ks-editor">
+                                        <input name="last_name" [ngModel] = "details?.last_name" value="{{details?.last_name}}"  class="form-control edit-input" placeholder="Enter your job position">
+                                    </div>
+                        </div> 
+                        <div class="ks-item">
+                            <span>Email</span>
+                                    <div class="ks-editor">
+                                        <input name="email" [ngModel] = "details?.email" value="{{details?.email}}" type="email"  class="form-control edit-input" placeholder="Enter your job position">
+                                    </div>
+                        </div> 
+                        <div class="ks-item">
+                            <span>Contact number</span>
+                                    <div class="ks-editor">
+                                        <input name="contact_number" [ngModel] = "details?.contact_number"  value="{{details?.contact_number}}"  class="form-control edit-input" placeholder="Enter your job position">
+                                    </div>
+                        </div> 
+                        <div class="ks-item">
+                            <span>City</span>
+                                    <div class="ks-editor">
+                                        <input name="city" [ngModel] = "details?.city"  value="{{details?.city}}"  class="form-control edit-input" placeholder="Enter your job position">
+                                    </div>
+                        </div>
+                        <div class="ks-item">
+                            <span>Address</span>
+                                    <div class="ks-editor">
+                                        <input name="address" [ngModel] = "details?.address"  value="{{details?.address}}"  class="form-control edit-input" placeholder="Enter your job position">
+                                    </div>
+                        </div>
+                        <div class="ks-item">
+                            <span>Country</span>
+                                    <div class="ks-editor">
+                                        <input name="country" [ngModel] = "details?.country"  value="{{details?.country}}" class="form-control edit-input" placeholder="Enter your job position">
+                                    </div>
+                        </div>
+                        <div class="ks-item">
+                            <span>Birthdate</span>
+                                <div class="ks-editor">
+                                        <input name="date_of_birth" [ngModel] = "details?.date_of_birth" type="date" name="date_of_birth" value="{{ details?.date_of_birth}}"  class="form-control edit-input">
+                                </div>
+                        </div>
+                       
+                        <div class="ks-item">
+                            <span>Short description</span> 
+                                    <div width="100%" class="ks-editor">
+                                         <textarea name="short_desc" [ngModel] = "details?.short_desc" class="edit-input" style="width:100%;" wrap="hard"  rows="7" value="{{ details?.short_desc}}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, velit culpa. Laborum, necessitatibus eum natus molestiae, minima, temporibus repellat amet consectetur excepturi cum quisquam corporis sapiente corrupti modi. Assumenda, cupiditate.</textarea>
+                                    </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="card panel panel-default ks-post box-shadow">
+                  <div class="ks-header">
+                    <a href="#" class="ks-user">
+                      <i class="la la-university ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                      <span class="ks-name">Education Info</span>
+                    </a>
+                    <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+                  </div>
+                  <div class="ks-body">
+                    <div *ngFor="let education of detailsEducation; index as i" class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                        <div class="card-block education-inline">
+                              <div class="ks-item">
+                                  <span>Name of institution</span>
+                                  <span>{{education.Institute_university_name}}</span>
+                              </div>  
+                              <div class="ks-item">
+                                  <span>Degree</span>
+                                  <span>{{education.certificate_degree_name}}</span>
+                              </div>
+                              <div class="ks-item">
+                                  <span>Period</span>
+                                  <span>from {{education.starting_date | date}} to {{education.completion_date | date}}</span>
+                              </div>
+                              <a  class="remove-btn"><i (click)="deleteEducation($event)" id="{{i}}"  class="la la-close"></i></a>
+                              <span data-toggle="modal" data-target="#editEducation"  class="edit-btn"> <i (click)="editEducation($event)" id="{{i}}" class="la la-pencil-square"></i></span>
+                        </div>
+                        <div class="card-block">
+                            <div class="ks-item">
+                                <span>Education description</span>
+                                <span>{{education.education_desc}}</span>   
+                              </div>
+                          </div>
+                      </div>
+                      
+                        <button class="btn btn-warning float-right btn-add" data-toggle="modal" data-target="#addEducation"><i class="la la-plus"></i> Add Education </button>
+                  </div>
+                  
+              </div>
+              <div class="card panel panel-default ks-post box-shadow ">
+                  <div class="ks-header">
+                    <a href="#" class="ks-user">
+                      <i class="la la-history ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                      <span class="ks-name">Experience</span>
+                    </a>
+                    <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+                  </div>
+                  <div class="ks-body">
+                    <div *ngFor="let experience of detailsExperience; index as i" class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                        <div class="card-block education-inline">
+                              <div class="ks-item">
+                                  <span>Name of company</span>
+                                  <span>{{experience.company_name}}</span>
+                              </div>
+                              <div class="ks-item">
+                                  <span>Position</span>
+                                  <span>{{experience.job_position}}</span>
+                              </div>
+                              <div class="ks-item">
+                                  <span>Period</span>
+                                  <span>from {{experience.start_date | date}} to {{experience.end_date | date}}</span>
+                              </div>
+                              <span  class="remove-btn"><i (click)="deleteExperience($event)" id="{{i}}"  class="la la-close"></i></span>
+                              <span data-toggle="modal" data-target="#editExperience" class="edit-btn"> <i (click)="editExperience($event)" id="{{i}}" class="la la-pencil-square"></i></span>
+                        </div>
+                        <div class="card-block">
+                          <div class="ks-item">
+                              <span>Job description</span>
+                              <span>{{experience.job_description}}</span>   
+                            </div>
+                        </div>
+                      </div>
+                          <button class="btn btn-warning float-right btn-add" data-toggle="modal" data-target="#addExperience"><i class="la la-plus"></i> Add experience </button>
+                  </div>
+              </div>
+              <div class="card panel panel-default ks-post box-shadow ">
+                  <div class="ks-header">
+                    <a href="#" class="ks-user">
+                      <i class="la la-gears ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                      <span class="ks-name">Skills and techniques</span>
+                    </a>
+                    <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+                  </div>
+                  <div class="ks-body">
+                    <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                        <div class="card-block">
+                            <div class="ks-tags">
+                                <span *ngFor="let skill of detailsSkillset; index as i" class="badge badge-info-outline rel-span">{{skill.skill_set_name}}<i (click)="deleteSkillset($event)" id="{{i}}"class="la la-close remove-btn-sm"></i></span>
+                              </div>
+                           </div>
+                      </div>
+                      <button class="btn btn-warning float-right btn-add" data-toggle="modal" data-target="#addSkill"><i class="la la-plus"></i> Add Skill </button>
+                  </div>
+              </div>
+              <div class="card panel panel-default ks-post box-shadow ">
+                  <div class="ks-header">
+                    <a href="#" class="ks-user">
+                      <i class="la la-language ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                      <span class="ks-name">Languages</span>
+                    </a>
+                    <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+                  </div>
+                  <div class="ks-body">
+                    <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                        <div class="card-block">
+                            <div class="ks-tags">
+                                    <span *ngFor="let lang of detailsLanguage; index as i" class="badge badge-info-outline rel-span"> <img  alt="" src="../../assets/img/flags/16/United-Kingdom.png"> {{lang.language_name}} ({{lang.language_level}}/10) <i (click)="deleteLanguage($event)" id="{{i}}" class="la la-close remove-btn-sm"></i></span>
+                              </div>
+                           </div>
+                      </div>
+                      <button  class="btn btn-warning float-right btn-add" data-toggle="modal" data-target="#addLanguage"><i class="la la-plus"></i> Add language </button>
+                  </div>
+              </div>
+              <div class="card panel panel-default ks-post box-shadow ">
+                  <div class="ks-header">
+                    <a href="#" class="ks-user">
+                      <i class="la la-car ks-color-info icon-header-profile" width="36px" height="36px"></i>
+                      <span class="ks-name">Driving licences</span>
+                    </a>
+                    <span class="ks-date-created"><span class="ks-text">Updated:</span> December 29, 2018</span>
+                  </div>
+                  <div class="ks-body">
+                    <div class="card panel panel-default ks-solid ks-widget ks-widget-info">
+                        <div class="card-block">
+                            <div class="ks-tags">
+                              <span *ngFor="let drLicence of detailsDriverLicence; index as i"  class="badge badge-info-outline rel-span"><i class="la la-{{drLicence.dr_licence_type}}" width="28px" height="28px"></i> {{drLicence.dr_licence_name}} | {{drLicence.dr_licence_type}} <i (click)="deleteDriverLicence($event)" id="{{i}}" class="la la-close remove-btn-sm"></i></span>
+                              </div>
+                           </div>
+                      </div>
+                      <button class="btn btn-warning float-right btn-add" data-toggle="modal" data-target="#addDriverLicence"><i class="la la-plus"></i> Add driver licence </button>
+                  </div>
+              </div>
+              <button (click)="editUser()" class="btn btn-success float-right btn-add"><i class="la la-save"></i> Save all changes </button>
+            </div>
+          </div>
+      </form>
+      
+    </div>
+  </div>
+
+</div>
+
+
+<div class="ks-mobile-overlay"></div>
+</div>
+
+
+
+
+
+
+<!-- MODAL ADD EDUCATION-->
+<div class="modal fade bd-example-modal-horizontal-form" id="addEducation" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="card-block">
+                        <h5 class="card-title">New Education</h5>
+                        <form>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Name of institution</label>
+                               <div class="col-sm-8">
+                                   <input  name="Institute_university_name" [(ngModel)]="educationDetails.Institute_university_name" class="form-control"placeholder="Name of institution">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Degree</label>
+                               <div class="col-sm-8">
+                                   <input  name="certificate_degree_name" [(ngModel)]="educationDetails.certificate_degree_name" class="form-control" placeholder="Degree">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Period</label>
+                               <div class="col-sm-8">
+                                   <div class="row">
+                                       <div class="col-sm-6">
+                                               <input type="text" name="starting_date" [(ngModel)]="educationDetails.starting_date" class="form-control" placeholder="from 6/2016">
+                                       </div>
+                                       <div class="col-sm-6">
+                                           <input type="text" name="completion_date" [(ngModel)]="educationDetails.completion_date" class="form-control" placeholder="to 6/2018">
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                            <label for="default-input" class="col-sm-4 form-control-label">Job description</label>
+                            <div class="col-sm-8">
+                                <textarea type="text" name="education_desc" [(ngModel)]="educationDetails.education_desc" cols="10" rows="10" class="form-control"  placeholder="Job description"></textarea>
+                            </div>
+                    </div>
+                           <div class="form-group row float-right">
+                                   <button  (click)="addEducation()" class="btn btn-warning float-right btn-add"><i class="la la-plus"></i> Add education </button>
+                           </div>
+                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--MODAL EDIT EDUCATION-->
+<div class="modal fade bd-example-modal-horizontal-form" id="editEducation" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="card-block">
+                        <h5 class="card-title">Edit education</h5>
+                        <form>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Name of institution</label>
+                               <div class="col-sm-8">
+                                   <input type="text" name="Institute_university_name" [(ngModel)]="editData.Institute_university_name"  class="form-control" value="{{editData.Institute_university_name}}">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Degree</label>
+                               <div class="col-sm-8">
+                                   <input type="text" name="certificate_degree_name" [(ngModel)]="editData.certificate_degree_name" class="form-control" id="default-input" value="{{editData.certificate_degree_name}}">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Period</label>
+                               <div class="col-sm-8">
+                                   <div class="row">
+                                       <div class="col-sm-6">
+                                               <input type="text" name="starting_date" [(ngModel)]="editData.starting_date" class="form-control" id="default-input" value="{{editData.starting_date}}">
+                                       </div>
+                                       <div class="col-sm-6">
+                                                <input type="text" name="completion_date" [(ngModel)]="editData.completion_date" class="form-control" id="default-input" value="{{editData.completion_date}}">
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                                <label for="default-input" class="col-sm-4 form-control-label">Job description</label>
+                                <div class="col-sm-8">
+                                    <textarea type="text" name="education_desc" cols="10" rows="10" class="form-control"  [(ngModel)]="editData.education_desc" value="{{editData.education_desc}}"  placeholder="Job description"></textarea>
+                                </div>
+                          </div>
+                           <div class="form-group row float-right">
+                                   <button (click)="saveEdited()" name="education_desc" class="btn btn-warning float-right btn-add"><i class="la la-pencil-square"></i> Save changes </button>
+                        
+                           </div>
+                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--MODAL DELETE EDUCATION-->
+<div class="modal fade bd-example-modal-horizontal-form" id="deleteEducation" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title">Modal Form</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true" class="la la-close"></span>
+             </button>
+          </div>
+          <div class="modal-body">
+             <div class="container-fluid">
+                <div class="card-block">
+                   <h5 class="card-title">Delete education</h5>
+                   <div class="card-block">
+                      <div class="ks-name">
+                         <span>Do you want to delete your job education in SC Mihajlo Pupin?</span>
+                         <div class="row float-right">
+                            <div class="form-group mg-top-10">
+                               <button  data-izimodal-close class="btn btn-warning">Cancel</button>
+                               <button  class="btn btn-danger">Delete</button>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+
+
+ <!-- MODAL ADD EXPERIENCE-->
+<div class="modal fade bd-example-modal-horizontal-form" id="addExperience" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="card-block">
+                        <h5 class="card-title">New Experience</h5>
+                        <form>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Company name</label>
+                               <div class="col-sm-8">
+                                   <input  name="company_name" [(ngModel)]="experienceDetails.company_name" class="form-control"placeholder="Company name">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Job position</label>
+                               <div class="col-sm-8">
+                                   <input  name="job_position" [(ngModel)]="experienceDetails.job_position" class="form-control" placeholder="Job position ">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Period</label>
+                               <div class="col-sm-8">
+                                   <div class="row">
+                                       <div class="col-sm-6">
+                                               <input type="text" name="start_date" [(ngModel)]="experienceDetails.start_date" class="form-control" placeholder="from 6/2016">
+                                       </div>
+                                       <div class="col-sm-6">
+                                           <input type="text" name="end_date" [(ngModel)]="experienceDetails.end_date" class="form-control" placeholder="to 6/2018">
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                            <label for="default-input" class="col-sm-4 form-control-label">Job description</label>
+                            <div class="col-sm-8">
+                                <textarea type="text" name="job_description" [(ngModel)]="experienceDetails.job_description" cols="10" rows="10" class="form-control"  placeholder="Job description"></textarea>
+                            </div>
+                    </div>
+                           <div class="form-group row float-right">
+                                   <button  (click)="addExperience()" class="btn btn-warning float-right btn-add"><i class="la la-plus"></i> Add experience </button>
+                           </div>
+                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--MODAL EDIT EXPERIENCE-->
+<div class="modal fade bd-example-modal-horizontal-form" id="editExperience" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="card-block">
+                        <h5 class="card-title">Edit experience</h5>
+                        <form>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Company name</label>
+                               <div class="col-sm-8">
+                                   <input type="text" name="company_name" [(ngModel)]="editDataExp.company_name"  class="form-control" value="{{editDataExp.company_name}}">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Job position </label>
+                               <div class="col-sm-8">
+                                   <input type="text" name="job_position" [(ngModel)]="editDataExp.job_position " class="form-control" id="default-input" value="{{editDataExp.job_position}}">
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Period</label>
+                               <div class="col-sm-8">
+                                   <div class="row">
+                                       <div class="col-sm-6">
+                                               <input type="text" name="start_date" [(ngModel)]="editDataExp.start_date" class="form-control" id="default-input" value="{{editDataExp.start_date}}">
+                                       </div>
+                                       <div class="col-sm-6">
+                                                <input type="text" name="end_date" [(ngModel)]="editDataExp.end_date" class="form-control" id="default-input" value="{{editDataExp.end_date}}">
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                                <label for="default-input" class="col-sm-4 form-control-label">Job description</label>
+                                <div class="col-sm-8">
+                                    <textarea type="text" name="job_description" cols="10" rows="10" class="form-control"  [(ngModel)]="editDataExp.job_description" value="{{editDataExp.job_description}}"  placeholder="Job description"></textarea>
+                                </div>
+                          </div>
+                           <div class="form-group row float-right">
+                                   <button (click)="saveEditedExperience()" class="btn btn-warning float-right btn-add"><i class="la la-pencil-square"></i> Save changes </button>
+                           </div>
+                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--MODAL DELETE EXPERIENCE-->
+<div class="modal fade bd-example-modal-horizontal-form" id="deleteExperience" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title">Modal Form</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true" class="la la-close"></span>
+             </button>
+          </div>
+          <div class="modal-body">
+             <div class="container-fluid">
+                <div class="card-block">
+                   <h5 class="card-title">Delete education</h5>
+                   <div class="card-block">
+                      <div class="ks-name">
+                         <span>Do you want to delete your job education in SC Mihajlo Pupin?</span>
+                         <div class="row float-right">
+                            <div class="form-group mg-top-10">
+                               <button  data-izimodal-close class="btn btn-warning">Cancel</button>
+                               <button  class="btn btn-danger">Delete</button>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+
+
+  <!-- MODAL ADD SKILL-->
+<div class="modal fade bd-example-modal-horizontal-form" id="addSkill" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="card-block">
+                        <h5 class="card-title">New skill</h5>
+                        <form>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Skill name</label>
+                               <div class="col-sm-8">
+                                    <div class="form-group row">
+                                        <div class="form-group input-group col-sm-12">
+                                            <input placeholder="Enter your skill" type="text" name="skill_set_name" [(ngModel)]="skillsetDetails.skill_set_name" class="form-control">
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="form-group row float-right">
+                                   <button (click)="addSkillset()" class="btn btn-warning float-right btn-add"><i class="la la-plus"></i> Add skill </button>
+                           </div>
+                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- MODAL ADD LANGUAGE-->
+  <div class="modal fade bd-example-modal-horizontal-form" id="addLanguage" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Language</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="card-block">
+                        <h5 class="card-title">New Language</h5>
+                        <form>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Language name</label>
+                               <div class="col-sm-8">
+                                    <div class="form-group row">
+                                        <div class="form-group input-group col-sm-12">
+                                            <input placeholder="Enter your skill" type="text" name="language_name" [(ngModel)]="languageDetails.language_name" class="form-control">
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Language name</label>
+                               <div class="col-sm-8">
+                                    <div class="form-group row">
+                                        <div class="form-group input-group col-sm-12">
+                                            <input placeholder="Enter your skill" type="text" name="language_level" [(ngModel)]="languageDetails.language_level" class="form-control">
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="form-group row float-right">
+                                   <button (click)="addLanguage()" class="btn btn-warning float-right btn-add"><i class="la la-plus"></i> Add skill </button>
+                           </div>
+                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- MODAL ADD DRIVER LICENCE-->
+  <div class="modal fade bd-example-modal-horizontal-form" id="addDriverLicence" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Driver licence</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="la la-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="card-block">
+                        <h5 class="card-title">New driver licence</h5>
+                        <form>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Driver licence name</label>
+                               <div class="col-sm-8">
+                                    <div class="form-group row">
+                                        <div class="form-group input-group col-sm-12">
+                                            <input placeholder="Enter your skill" type="text" name="dr_licence_name" [(ngModel)]="driverLicenceDetails.dr_licence_name" class="form-control">
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="form-group row">
+                               <label for="default-input" class="col-sm-4 form-control-label">Language name</label>
+                               <div class="col-sm-8">
+                                    <div class="form-group row">
+                                        <div class="form-group input-group col-sm-12">
+                                            <select name="dr_licence_type" class="form-control" name="dr_licence_type" [(ngModel)]="driverLicenceDetails.dr_licence_type" >
+                                                <option value="car">Car</option>
+                                                <option value="bus">Bus</option>
+                                                <option value="truck">Truck</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="form-group row float-right">
+                                   <button (click)="addDriverLicence()" class="btn btn-warning float-right btn-add"><i class="la la-plus"></i> Add skill </button>
+                           </div>
+                        </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-horizontal-form" id="uploadPhoto" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+           <div class="modal-content">
+              <div class="modal-header">
+                 <h5 class="modal-title">Upload photo</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true" class="la la-close"></span>
+                 </button>
+              </div>
+              <div class="modal-body">
+                 <div class="container-fluid">
+                    <div class="card-block">
+                       <h5 class="card-title">Select photo to upload</h5>
+                       <div class="card-block">
+                        <div *ngIf="currentFileUpload" class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+                              aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+                              {{progress.percentage}}%</div>
+                          </div>
+                          
+                          <label class="btn btn-default">
+                            <input type="file" (change)="selectFile($event)">
+                          </label>
+                          <a href="http://localhost:8080/api/file/{{fileUpload.id}}">{{fileUpload.name}}</a>
+                          
+                          <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>

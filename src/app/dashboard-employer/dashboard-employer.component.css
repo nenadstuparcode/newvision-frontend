@@ -1,0 +1,29 @@
+@import '../../assets/styles/apps/projects/grid-board.min.css';
+
+.mg-top-10 {
+    margin-top:5%;
+}
+.box-shadow {
+    box-shadow: 1px 8px 14px -5px rgba(0,0,0,0.61);
+  }
+  
+  .box-shadow-sm {
+    box-shadow: 0px 6px 4px -5px rgba(0,0,0,0.61);
+  }
+  .company-card-title {
+      font-size:1.2em;
+      font-weight: 600;
+  }
+  .btn-view-more {
+    box-shadow: 1px 8px 14px -5px rgba(0,0,0,0.61) !important;
+  }
+  .btn-view-more:hover {
+    box-shadow: 1px 6px 5px -4px rgba(0,0,0,0.61) !important;
+  }
+.company-card-mail {
+    font-size:12px; 
+    margin-left:10px;
+    color:#333;
+    font-weight: 500;
+}
+  
